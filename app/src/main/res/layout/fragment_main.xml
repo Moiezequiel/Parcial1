@@ -1,67 +1,73 @@
 <?xml version="1.0" encoding="utf-8"?>
-<layout xmlns:android="http://schemas.android.com/apk/res/android"
+<layout
+    xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools">
-
-    <data>
-
-        <variable
-            name="viewmodel"
-            />
-    </data>
-
     <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:background="@color/background"
+        tools:context=".ui.main.MainFragment"
+        android:background="@color/tertiary"
         >
 
-        <TextView
-            android:id="@+id/textView2"
-            style="@style/TextAppearance.MaterialComponents.Headline4"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="@dimen/normal_gap"
-            android:gravity="center"
-            android:text="@string/famous_artist"
-            android:textColor="@color/white"
-            android:textStyle="bold"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent" />
-
-
-        <com.google.android.material.floatingactionbutton.FloatingActionButton
-            android:id="@+id/btn_link_new_movie"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_gravity="bottom|right"
-            android:layout_margin="16dp"
-            android:layout_marginEnd="@dimen/extra_gap"
-            android:layout_marginBottom="@dimen/normal_gap"
-            android:contentDescription="add button"
-            app:backgroundTint="@color/white"
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/recyle_view_employee"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:layout_marginTop="@dimen/l_gap"
+            android:layout_marginBottom="@dimen/doble_xl_gap"
+            android:padding="@dimen/gap"
+            app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
-            app:srcCompat="@drawable/plus" />
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/linearLayout2"
+            tools:itemCount="8"
+            tools:listitem="@layout/fragment_item_employee" />
 
-        <androidx.recyclerview.widget.RecyclerView
-            android:id="@+id/movies_recycle_view"
+        <LinearLayout
+            android:id="@+id/linearLayout2"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginStart="@dimen/normal_gap"
-            android:layout_marginTop="@dimen/extra_gap"
-            android:layout_marginEnd="@dimen/normal_gap"
-            app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+            android:orientation="vertical"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/textView2"
-            tools:itemCount="5"
-            tools:listitem="@layout/fragment_artist_item"
+            app:layout_constraintTop_toTopOf="parent"
+            android:background="@color/secundary"
+            android:gravity="center"
 
+            >
+
+            <TextView
+                android:id="@+id/textView3"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:padding="@dimen/gap"
+                android:text="@string/employee_administration_title"
+                android:textAlignment="center"
+                android:textAllCaps="true"
+                android:textColor="@color/background"
+                android:textSize="40sp"
+                android:textStyle="bold"
+
+                />
+        </LinearLayout>
+
+        <com.google.android.material.floatingactionbutton.FloatingActionButton
+            android:id="@+id/btn_add_employee"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="end|bottom"
+            android:layout_margin="16dp"
+
+            android:backgroundTint="@color/primary"
+            android:layout_marginEnd="@dimen/md_gap"
+            android:layout_marginBottom="28dp"
+            android:contentDescription="@string/add_new_employee_desc"
+            android:src="@drawable/agregar"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
             />
-
     </androidx.constraintlayout.widget.ConstraintLayout>
-
-
 </layout>

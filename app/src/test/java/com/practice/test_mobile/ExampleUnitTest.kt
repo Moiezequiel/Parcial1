@@ -1,4 +1,4 @@
-package com.example.parcial_uno
+package com.practice.test_mobile
 
 import org.junit.Test
 

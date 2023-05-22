@@ -1,19 +1,18 @@
 <resources>
-    <string name="app_name">Parcial_uno</string>
+    <string name="app_name">test_mobile</string>
     <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>
-    <string name="artistimage">artistimage</string>
-    <string name="hanna_monatana">Hanna Monatana</string>
-    <string name="new_artist_name">new_artist_name</string>
-    <string name="hint_name">hint_name</string>
-    <string name="hint_category">hint_category</string>
-    <string name="category">category</string>
-    <string name="hint_description">hint_description</string>
-    <string name="description">description</string>
-    <string name="hint_type_music">hint_type_music</string>
-    <string name="type_of_music">Type_of_music</string>
-    <string name="submit">submit</string>
-    <string name="artist_description_image">artist_description_image</string>
-    <string name="hannnamontanadescription">HannnaMontanadescription</string>
-    <string name="famous_artist">Famous Artist</string>
+    <string name="profile_picture_text">profile_picture</string>
+    <string name="first_name_hint">First Name</string>
+    <string name="last_name_hint">Last Name</string>
+    <string name="email_hint">Email</string>
+    <string name="description_hint">Description</string>
+    <string name="add_text">Add</string>
+    <string name="add_new_employee_title">ADD NEW EMPLOYEE</string>
+    <string name="employee_administration_title">Employee administration</string>
+    <string name="add_new_employee_desc">add new employee</string>
+    <string name="employee_profile_pic_desc">employee profile pic</string>
+    <string name="name_text">Name</string>
+    <string name="last_name_text">Last Name</string>
+    <string name="email_text">Email</string>
 </resources>
