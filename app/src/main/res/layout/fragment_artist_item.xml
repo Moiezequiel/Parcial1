@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <!-- TODO: Update blank fragment layout -->
+
+<androidx.cardview.widget.CardView
+   android:id="@+id/card_view_artist"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_margin="@dimen/normal_gap"
+    app:cardBackgroundColor="@color/cardlayout"
+    app:cardCornerRadius="@dimen/gap">
+
+<LinearLayout
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:gravity="center"
+    android:orientation="horizontal"
+    android:paddingHorizontal="@dimen/normal_gap"
+    android:paddingVertical="@dimen/gap">
+
+    <androidx.cardview.widget.CardView
+        android:layout_width="225dp"
+        android:layout_height="80dp"
+        android:layout_weight="2"
+        app:cardCornerRadius="@dimen/gap">
+
+        <ImageView
+            android:id="@+id/image_view_artist"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:contentDescription="@string/artistimage"
+            android:src="@drawable/music" />
+
+    </androidx.cardview.widget.CardView>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:orientation="vertical"
+        android:paddingStart="@dimen/normal_gap">
+
+        <TextView
+            android:id="@+id/text_view_name"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textColor="@color/white"
+            android:textSize="@dimen/text_movie_title"
+            tools:text="@string/hanna_monatana" />
+
+        <TextView
+            android:id="@+id/text_view_qualification"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/cardlayout"
+            android:textSize="@dimen/text_movie_title"
+            android:textStyle="bold"
+            tools:text="PopMusic"
+            />
+    </LinearLayout>
+</LinearLayout>
+
+</androidx.cardview.widget.CardView>
+</layout>

@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/mainFragment">
+
+    <fragment
+        android:id="@+id/mainFragment"
+        android:name="com.example.parcial_uno.MainFragment"
+        android:label="fragment_main"
+        tools:layout="@layout/fragment_main" >
+        <action
+            android:id="@+id/action_mainFragment_to_new_artist_Fragment"
+            app:destination="@id/new_artist_Fragment" />
+        <action
+            android:id="@+id/action_mainFragment_to_artist_itemFragment"
+            app:destination="@id/artist_itemFragment" />
+        <action
+            android:id="@+id/action_mainFragment_to_artist_Fragment"
+            app:destination="@id/artist_Fragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/new_artist_Fragment"
+        android:name="com.example.parcial_uno.New_artist_Fragment"
+        android:label="fragment_new_artist_"
+        tools:layout="@layout/fragment_new_artist_" />
+    <fragment
+        android:id="@+id/artist_itemFragment"
+        android:name="com.example.parcial_uno.artist_itemFragment"
+        android:label="fragment_artist_item"
+        tools:layout="@layout/fragment_artist_item" />
+    <fragment
+        android:id="@+id/artist_Fragment"
+        android:name="com.example.parcial_uno.Artist_Fragment"
+        android:label="fragment_artist_"
+        tools:layout="@layout/fragment_artist_" />
+</navigation>

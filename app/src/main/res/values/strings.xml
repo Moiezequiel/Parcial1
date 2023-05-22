@@ -1,3 +1,19 @@
 <resources>
     <string name="app_name">Parcial_uno</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="artistimage">artistimage</string>
+    <string name="hanna_monatana">Hanna Monatana</string>
+    <string name="new_artist_name">new_artist_name</string>
+    <string name="hint_name">hint_name</string>
+    <string name="hint_category">hint_category</string>
+    <string name="category">category</string>
+    <string name="hint_description">hint_description</string>
+    <string name="description">description</string>
+    <string name="hint_type_music">hint_type_music</string>
+    <string name="type_of_music">Type_of_music</string>
+    <string name="submit">submit</string>
+    <string name="artist_description_image">artist_description_image</string>
+    <string name="hannnamontanadescription">HannnaMontanadescription</string>
+    <string name="famous_artist">Famous Artist</string>
 </resources>
