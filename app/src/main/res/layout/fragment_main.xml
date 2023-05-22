@@ -44,7 +44,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:padding="@dimen/gap"
-                android:text="@string/employee_administration_title"
+                android:text="@string/artistadmin"
                 android:textAlignment="center"
                 android:textAllCaps="true"
                 android:textColor="@color/background"
@@ -65,7 +65,7 @@
             android:layout_marginEnd="@dimen/md_gap"
             android:layout_marginBottom="28dp"
             android:contentDescription="@string/add_new_employee_desc"
-            android:src="@drawable/agregar"
+            android:src="@drawable/plus"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             />

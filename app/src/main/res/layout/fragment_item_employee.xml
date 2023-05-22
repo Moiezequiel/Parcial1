@@ -27,7 +27,7 @@
                 android:layout_height="80dp"
                 android:layout_weight="4"
                 android:contentDescription="@string/profile_picture_text"
-                app:srcCompat="@drawable/usuario" />
+                app:srcCompat="@drawable/music" />
 
             <LinearLayout
                 android:layout_width="match_parent"
@@ -43,18 +43,13 @@
                     android:id="@+id/text_view_name"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    tools:text="Henry Eduardo Escobar Lima"
+                    tools:text="Hanna Montana"
                     android:textColor="@color/background"
                     android:paddingBottom="@dimen/sm_gap"
                     android:textStyle="bold"
                     />
 
-                <TextView
-                    android:id="@+id/text_view_email"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    tools:text="henry.escobar@citala.edu.sv"
-                    android:textColor="@color/background"/>
+
             </LinearLayout>
         </LinearLayout>
     </androidx.cardview.widget.CardView>

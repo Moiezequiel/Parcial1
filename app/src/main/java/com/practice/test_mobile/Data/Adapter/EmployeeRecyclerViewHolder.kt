@@ -11,7 +11,7 @@ class EmployeeRecyclerViewHolder(private val binding: FragmentItemEmployeeBindin
         employee: EmployeeModel, clickListener: (EmployeeModel)->Unit
     ){
         binding.textViewName.text = employee.name + " " + employee.lastName
-        binding.textViewEmail.text = employee.email
+
 
         binding.cardItem.setOnClickListener{
             clickListener(employee)

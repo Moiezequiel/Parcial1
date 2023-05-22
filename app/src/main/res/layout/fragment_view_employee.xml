@@ -78,7 +78,7 @@
                         android:text="@{viewmodel.name}"
                         android:textColor="@color/black"
                         android:textSize="24sp"
-                        tools:text="Henry Eduardo" />
+                        tools:text="Hanna" />
                 </LinearLayout>
 
                 <LinearLayout
@@ -108,7 +108,7 @@
                         android:text="@{viewmodel.lastName}"
                         android:textColor="@color/black"
                         android:textSize="24sp"
-                        tools:text="Escobar Lima" />
+                        tools:text="Perales" />
                 </LinearLayout>
 
                 <LinearLayout
@@ -123,7 +123,7 @@
                         android:layout_height="wrap_content"
                         android:layout_marginEnd="@dimen/gap"
                         android:layout_weight="1"
-                        android:text="@string/email_text"
+
                         android:textColor="@color/black"
                         android:textSize="24sp"
                         android:textStyle="bold" />
@@ -136,7 +136,7 @@
                         android:text="@{viewmodel.email}"
                         android:textColor="@color/black"
                         android:textSize="24sp"
-                        tools:text="henry.escobar@citala.edu.sv" />
+                     />
 
                 </LinearLayout>
 
@@ -147,7 +147,7 @@
                     android:text="@{viewmodel.description}"
                     android:textColor="@color/black"
                     android:textSize="24sp"
-                    tools:text="some description goes here blablabla" />
+                    tools:text="@string/description" />
 
             </LinearLayout>
         </androidx.cardview.widget.CardView>
