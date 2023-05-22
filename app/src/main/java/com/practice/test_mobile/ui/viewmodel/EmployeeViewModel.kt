@@ -12,7 +12,7 @@ import androidx.lifecycle.ViewModelProvider.AndroidViewModelFactory.Companion.AP
 class EmployeeViewModel (private val repository: repository): ViewModel() {
     val Name = MutableLiveData("")
     val lastName = MutableLiveData("")
-    val Email = MutableLiveData("")
+
     val Description = MutableLiveData("")
     val status = MutableLiveData("")
 
@@ -24,7 +24,7 @@ class EmployeeViewModel (private val repository: repository): ViewModel() {
         when{
             Name.value.isNullOrBlank() -> return false
             lastName.value.isNullOrBlank() -> return false
-            Email.value.isNullOrBlank() -> return false
+
             Description.value.isNullOrBlank() -> return false
         }
         return true
@@ -37,10 +37,7 @@ class EmployeeViewModel (private val repository: repository): ViewModel() {
         }
         val employee = EmployeeModel(
             name = Name.value!!,
-            lastName = lastName.value!!,
-            email = Email.value!!,
-            description = Description.value!!
-        )
+            lastName = lastName.value!!,)
 
         addEmployee(employee)
         status.value = EMPLOYEE_ADDED
@@ -48,10 +45,12 @@ class EmployeeViewModel (private val repository: repository): ViewModel() {
         return EMPLOYEE_ADDED
     }
 
+
+
     fun clearData(){
         Name.value = ""
         lastName.value = ""
-        Email.value = ""
+
         Description.value = ""
     }
 
@@ -62,7 +61,7 @@ class EmployeeViewModel (private val repository: repository): ViewModel() {
     fun setSelectedEmployee(employee: EmployeeModel){
         Name.value = employee.name
         lastName.value = employee.lastName
-        Email.value = employee.email
+       
         Description.value = employee.description
     }
 
