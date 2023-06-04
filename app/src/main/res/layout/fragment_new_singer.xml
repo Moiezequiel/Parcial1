@@ -1,0 +1,116 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <data>
+
+        <variable
+            name="viewmodel"
+            type="com.test.app_cantante.ui.viewModel.SingerViewModel" />
+    </data>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/primary"
+        tools:context=".ui.formEmployee.FormFragment">
+
+        <TextView
+            android:id="@+id/textView"
+            style="@style/MaterialAlertDialog.Material3.Title.Text"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/md_gap"
+            android:text="@string/add_new_singer_title"
+            android:textAlignment="center"
+            android:textColor="@color/black"
+            android:textStyle="bold"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <androidx.cardview.widget.CardView
+            android:layout_width="0dp"
+            android:layout_height="500dp"
+            android:layout_marginStart="@dimen/md_gap"
+            android:layout_marginTop="@dimen/md_gap"
+            android:layout_marginEnd="@dimen/md_gap"
+            android:backgroundTint="@color/white"
+            app:cardCornerRadius="@dimen/sm_gap"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/textView"
+            app:layout_constraintVertical_bias="0.0">
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:backgroundTint="@color/purple_500"
+                android:padding="@dimen/gap">
+
+                <LinearLayout
+                    android:id="@+id/linearLayout"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/md_gap"
+                    android:orientation="vertical"
+                    android:padding="@dimen/sm_gap"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    android:shadowColor="@color/teal_700">
+
+                    <com.google.android.material.textfield.TextInputLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_marginBottom="@dimen/gap">
+
+                        <com.google.android.material.textfield.TextInputEditText
+                            android:id="@+id/text_input_name"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:hint="@string/singer_name_hint"
+
+                            android:text="@={viewmodel.name}"
+                            android:textColor="@color/purple_500" />
+                    </com.google.android.material.textfield.TextInputLayout>
+
+                    <com.google.android.material.textfield.TextInputLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_marginBottom="@dimen/gap">
+
+                        <com.google.android.material.textfield.TextInputEditText
+                            android:id="@+id/text_input_last_name"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:hint="@string/music_type_hint"
+                            android:text="@={viewmodel.musicType}"
+                            android:textColor="@color/purple_500" />
+                    </com.google.android.material.textfield.TextInputLayout>
+
+                </LinearLayout>
+
+                <Button
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/l_gap"
+                    android:layout_marginTop="@dimen/md_gap"
+                    android:layout_marginEnd="@dimen/l_gap"
+                    android:backgroundTint="@color/primary"
+                    android:onClick="@{()->viewmodel.createSinger()}"
+                    android:text="@string/add_new_singer_text"
+                    android:textAllCaps="true"
+                    android:textColor="@color/white"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/linearLayout" />
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+        </androidx.cardview.widget.CardView>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>
